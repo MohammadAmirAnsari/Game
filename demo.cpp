@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int n = 4, m = 4, tile = 1, i = n-1, j = m-1;
+int n = 40, m = 40, tile = 1, i = n-1, j = m-1;
 vector<vector<int>> a(n,vector<int>(m));
 void randOrdered();
 void starPrint(int length, char c = '*'){
