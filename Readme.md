@@ -44,7 +44,7 @@ To compile and run the game, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Shifting_Number_Game_CPP.git
+   git clone https://github.com/MohammadAmirAnsari/Shifting_Number_Game_CPP.git
    ```
 2. Navigate to the project directory:
    ```bash
