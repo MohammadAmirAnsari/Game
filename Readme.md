@@ -25,3 +25,8 @@ Move Right: By Pressing D Key
 
 3. You can exit the game at any time by pressing 'N' or 'n' 
          Happy gaming , Good Luck
+
+
+Version 2 of Number Shifting game demo video link.
+
+https://drive.google.com/file/d/1VXmcFPF--BPK8mXVY46Z9GQYV9BtpJg4/view?usp=share_link
