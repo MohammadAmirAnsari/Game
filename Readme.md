@@ -1,32 +1,81 @@
-I made a Shifting Number Game using C++ language
-Here are the rules of the game.
-I have also provided the code as well as the executable .exe file.
-For Video Demo See the link
+Here's a refined `README.md` file for your Shifting Number Game project, following a clear and organized style guide:
 
-https://drive.google.com/drive/folders/1dHKr6dySdhW7H30xdNVwrZxqM9c-nMXV?usp=share_link
+```markdown
+# Shifting Number Game
 
-******************
-RULE OF THIS GAME
-******************
+Welcome to the Shifting Number Game, a puzzle game implemented in C++.
 
-1. You can move only 1 step at a time by arrow key 
-Move Up   : By Pressing W Key 
-Move Down : By Pressing S Key
-Move Left : By Pressing A Key
-Move Right: By Pressing D Key
+## Table of Contents
 
-2. You can move number at empty position only 
-**************************
-|    1    2    3    4    |
-|    5    6    7    8    |
-|    9   10   11   12    |
-|   13   14   15         |
-**************************
+- [Introduction](#introduction)
+- [Rules](#rules)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo Videos](#demo-videos)
+- [License](#license)
 
-3. You can exit the game at any time by pressing 'N' or 'n' 
-         Happy gaming , Good Luck
+## Introduction
+
+The Shifting Number Game is a fun and challenging puzzle where you rearrange numbers in a grid to achieve a specific order. This project includes the source code as well as the executable `.exe` file.
+
+## Rules
+
+1. You can move only one step at a time using the following keys:
+    - **Move Up**: Press `W` key
+    - **Move Down**: Press `S` key
+    - **Move Left**: Press `A` key
+    - **Move Right**: Press `D` key
+
+2. You can move a number to an adjacent empty position only.
+   
+   ```
+   **************************
+   |    1    2    3    4    |
+   |    5    6    7    8    |
+   |    9   10   11   12    |
+   |   13   14   15         |
+   **************************
+   ```
+
+3. You can exit the game at any time by pressing `N` or `n`.
+
+Happy gaming, and good luck!
+
+## Installation
+
+To compile and run the game, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/shifting-number-game.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Shifting_Number_Game_CPP
+   ```
+3. Compile the source code:
+   ```bash
+   g++ demo_v2.cpp
+   ```
+4. Run the executable:
+   ```bash
+   ./a.exe
+   ```
+
+Alternatively, you can use the provided executable `demo_v2.exe` file to run the game directly on Windows.
+
+## Usage
+
+Run the executable and follow the game instructions. Use the arrow keys to shift the numbers and arrange them in the correct order. Press `N` or `n` to exit the game at any time.
+
+## Demo Videos
+
+For a visual demonstration of the game, check out the following demo videos:
+
+- [Version 1](https://drive.google.com/drive/folders/1dHKr6dySdhW7H30xdNVwrZxqM9c-nMXV?usp=share_link)
+- [Version 2](https://drive.google.com/file/d/1VXmcFPF--BPK8mXVY46Z9GQYV9BtpJg4/view?usp=share_link)
 
 
-Version 2 of Number Shifting game demo video link.
+### Shifting Number Game
+Made with ♥ by [Your Name](https://github.com/yourusername)
 
-https://drive.google.com/file/d/1VXmcFPF--BPK8mXVY46Z9GQYV9BtpJg4/view?usp=share_link
