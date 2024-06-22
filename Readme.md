@@ -1,6 +1,3 @@
-Here's a refined `README.md` file for your Shifting Number Game project, following a clear and organized style guide:
-
-```markdown
 # Shifting Number Game
 
 Welcome to the Shifting Number Game, a puzzle game implemented in C++.
@@ -77,5 +74,5 @@ For a visual demonstration of the game, check out the following demo videos:
 
 
 ### Shifting Number Game
-Made with ♥ by [Your Name](https://github.com/yourusername)
+Made with ♥ by [Mohammad Amir Ansari](https://github.com/yourusername)
 
