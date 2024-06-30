@@ -1,0 +1,77 @@
+form {
+    display: grid;
+    gap: $font-14-sm $font-14-sm;
+    grid-template-areas: 'label-row label-col'
+        'input-row input-col'
+        'button button';
+    grid-template-columns: repeat(9, 1fr);
+
+    & * {
+        border: 2px solid black;
+    }
+
+    label {
+        &[for=rows] {
+            grid-area: label-row;
+            grid-column: 3/span 1;
+        }
+
+        &[for=columns] {
+            grid-area: label-col;
+            grid-column: 7/span 1;
+        }
+
+        & {
+            font-size: $font-14-sm;
+            font-weight: 500;
+            min-height: 30px;
+            padding: 5px 20px;
+            border: 2px solid coral;
+            border-radius: 15px 10px;
+        }
+
+    }
+
+    input {
+        &[name=rows] {
+            grid-area: input-row;
+            grid-column: 2/span 3;
+        }
+
+        &[name=columns] {
+            grid-area: input-row;
+            grid-column: 6/span 3;
+        }
+
+        & {
+            border-radius: 25px;
+            min-height: $font-32-4xl;
+            padding-left: 10px;
+            color: $input-form-color;
+            border-radius: 10px 15px;
+
+            &::placeholder {
+                color: $placeholder-color;
+            }
+        }
+    }
+
+    button {
+        grid-area: button;
+        grid-column: 5/span 1;
+        background-color: aliceblue;
+        border-radius: 50px;
+        height: $font-32-4xl;
+        font-size: $font-14-sm;
+        text-align: center;
+        transition: scale 0.5s;
+
+        &:hover {
+            color: coral;
+            font-weight: 700;
+            border: 2px solid black;
+            background-color: black;
+            scale: 1.1;
+        }
+    }
+}

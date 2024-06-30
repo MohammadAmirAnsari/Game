@@ -1,0 +1,21 @@
+.grid {
+    display: grid;
+    border: 2px solid red;
+    overflow: auto;
+}
+
+.grid-items {
+    border: 2px solid blue;
+    font-size: $font-48-7xl;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: $font-48-7xl;
+    font-family: 'Roboto';
+}
+
+h1 {
+    font-size: $font-80-11xl;
+    font-family: 'Tangerine';
+}

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Tangerine|Roboto&effect=fire");
+
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+
+    & *::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#div-root {
+    max-width: $root-width;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: 2px solid black;
+    text-align: center;
+}
