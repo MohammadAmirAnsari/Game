@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Shifting Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="nsg.js" defer></script>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <script src="assests/js/nsg.js" defer></script>
 </head>
 
 <body>
-    <div id="root">
+    <div id="div-root">
+        <h1 class="font-effect-fire">Number Shifting Game</h1>
+        <h2>Enter number of rows and columns</h2>
         <form action="#" method="POST" onsubmit="handleSubmit(event)">
-            <label for="rows">Enter number of rows</label>
-            <input type="text" name="rows" id="rows">
-            <label for="columns">Enter number of columns</label>
-            <input type="text" name="columns" id="columns">
+            <label for="rows">Rows</label>
+            <input type="text" name="rows" id="rows" placeholder="Rows">
+            <label for="columns">Columns</label>
+            <input type="text" name="columns" id="columns" placeholder="Columns">
+            <br>
             <button type="submit">Submit</button>
         </form>
     </div>
