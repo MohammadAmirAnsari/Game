@@ -1,5 +1,5 @@
 function handleSubmit(event) {
-    root = document.getElementById("root");
+    root = document.getElementById("div-root");
     if (document.getElementsByClassName("grid").length > 0)
         document.getElementsByClassName("grid")[0].remove();
     // console.log('Submit button clicked');
