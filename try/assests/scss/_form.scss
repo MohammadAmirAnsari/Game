@@ -49,9 +49,15 @@ form {
             padding-left: 10px;
             color: $input-form-color;
             border-radius: 10px 15px;
+            background-color: $input-form-bg-color;
 
             &::placeholder {
                 color: $placeholder-color;
+
+            }
+
+            &:focus {
+                background-color: $input-form-bg-focus-color;
             }
         }
     }
@@ -59,19 +65,18 @@ form {
     button {
         grid-area: button;
         grid-column: 5/span 1;
-        background-color: aliceblue;
+        color: $button-bg-hover;
         border-radius: 50px;
+        background-color: $button-text-hover;
         height: $font-32-4xl;
         font-size: $font-14-sm;
         text-align: center;
-        transition: scale 0.5s;
+        margin-bottom: .2rem;
 
         &:hover {
-            color: coral;
-            font-weight: 700;
-            border: 2px solid black;
-            background-color: black;
-            scale: 1.1;
+            color: $button-text-hover;
+            border: 2px solid $dark-5;
+            background-color: $button-bg-hover;
         }
     }
 }

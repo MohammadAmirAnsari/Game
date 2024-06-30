@@ -21,6 +21,25 @@ $font-80-11xl	: 5rem; // 11xl 80px;
 $font-96-12xl	: 6rem; // 12xl 96px;
 
 
+$light-1 : hsl(0, 0%, 100%);
+$light-2 : hsl(0, 0%, 90%);
+$light-3 : hsl(0, 0%, 80%);
+$light-4 : hsl(0, 0%, 70%);
+$light-5 : hsl(0, 0%, 60%);
+$grey : hsl(0, 0%, 50%);
+$dark-1 : hsl(0, 0%, 40%);
+$dark-2 : hsl(0, 0%, 30%);
+$dark-3 : hsl(0, 0%, 20%);
+$dark-4 : hsl(0, 0%, 10%);
+$dark-5 : hsl(0, 0%, 0%);
 
-$placeholder-color: hsl(0, 70%, 78%);
-$input-form-color: hsl(12, 7%, 14%);
+$light-coral : hsl(16, 100%, 80%);
+$dark-coral : hsl(16, 57%, 44%);
+
+$placeholder-color: $grey;
+$input-form-color: $dark-3;
+$input-form-bg-color: $light-1;
+$input-form-bg-focus-color: $light-coral;
+
+$button-text-hover: $dark-5;
+$button-bg-hover: $light-coral;

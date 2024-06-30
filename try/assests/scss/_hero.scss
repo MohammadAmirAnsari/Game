@@ -1,13 +1,16 @@
 .grid {
     display: grid;
-    border: 2px solid red;
+    gap: .3rem .3rem;
+    padding: .5rem;
+    border: 2px solid $dark-2;
     overflow: auto;
 }
 
 .grid-items {
-    border: 2px solid blue;
-    font-size: $font-48-7xl;
-    border-radius: 50%;
+    border: 2px solid $dark-2;
+    font-size: auto;
+    padding: .1rem;
+    border-radius: 50px;
 }
 
 h2 {

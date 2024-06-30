@@ -10,6 +10,7 @@ function handleSubmit(event) {
     div.classList.add("grid");
     div.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
     div.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+    div.style.gap = "1rem 1rem";
     root.appendChild(div);
     let count = 1
     for (let i = 0; i < rows; i++) {
