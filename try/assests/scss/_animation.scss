@@ -1,0 +1,13 @@
+@keyframes zoom-in-out {
+    0% {
+        scale: 0.9;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 0.9;
+    }
+}
