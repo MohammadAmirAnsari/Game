@@ -7,10 +7,20 @@ form {
     grid-template-columns: repeat(9, 1fr);
 
     & * {
-        border: 2px solid black;
+        border: 2px solid $dark-5;
     }
 
     label {
+
+        & {
+            font-size: $font-14-sm;
+            font-weight: 500;
+            min-height: 30px;
+            padding: 5px 20px;
+            border: 2px solid $light-gold;
+            border-radius: 15px 10px;
+        }
+
         &[for=rows] {
             grid-area: label-row;
             grid-column: 3/span 1;
@@ -19,15 +29,6 @@ form {
         &[for=columns] {
             grid-area: label-col;
             grid-column: 7/span 1;
-        }
-
-        & {
-            font-size: $font-14-sm;
-            font-weight: 500;
-            min-height: 30px;
-            padding: 5px 20px;
-            border: 2px solid coral;
-            border-radius: 15px 10px;
         }
 
     }
@@ -44,39 +45,46 @@ form {
         }
 
         & {
-            border-radius: 25px;
             min-height: $font-32-4xl;
             padding-left: 10px;
-            color: $input-form-color;
+            color: $light-gold;
             border-radius: 10px 15px;
-            background-color: $input-form-bg-color;
+            border-color: $light-gold;
+            background-color: $dark-5;
 
             &::placeholder {
-                color: $placeholder-color;
+                color: $grey;
 
             }
 
             &:focus {
-                background-color: $input-form-bg-focus-color;
+                border-color: $light-gold;
+                outline: none;
+
+                &:focus::placeholder {
+                    color: $grey;
+                }
             }
+
         }
     }
 
     button {
         grid-area: button;
         grid-column: 5/span 1;
-        color: $button-bg-hover;
+        color: $button-text-color;
         border-radius: 50px;
-        background-color: $button-text-hover;
+        border-color: $light-gold;
+        background-color: $button-bg-color;
         height: $font-32-4xl;
         font-size: $font-14-sm;
         text-align: center;
-        margin-bottom: .2rem;
+        margin-bottom: 1rem;
 
         &:hover {
-            color: $button-text-hover;
+            color: $button-bg-color;
             border: 2px solid $dark-5;
-            background-color: $button-bg-hover;
+            background-color: $button-text-color;
         }
     }
 }

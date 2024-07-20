@@ -24,8 +24,11 @@ body {
 
 #div-root {
     max-width: $root-width;
+    width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    border: 2px solid black;
+    border: 2px solid $light-1;
+    background-color: $dark-5;
     text-align: center;
+    color: $light-gold;
 }

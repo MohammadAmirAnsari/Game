@@ -1,16 +1,29 @@
 .grid {
     display: grid;
-    gap: .3rem .3rem;
-    padding: .5rem;
+    place-items: center;
+    padding: 2rem;
     border: 2px solid $dark-2;
     overflow: auto;
+    margin-bottom: 2rem;
 }
 
 .grid-items {
     border: 2px solid $dark-2;
-    font-size: auto;
-    padding: .1rem;
-    border-radius: 50px;
+    font-size: $font-24-2xl;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px $dark-gold, 0 0 20px $light-gold, 0 0 20px $light-2;
+    transition: scale 0.2s;
+
+    &:hover {
+        scale: 1.1;
+    }
+
 }
 
 h2 {
@@ -21,4 +34,10 @@ h2 {
 h1 {
     font-size: $font-80-11xl;
     font-family: 'Tangerine';
+}
+
+.shifter {
+    border-color: $light-1;
+    animation: zoom-in-out 1s infinite;
+
 }
