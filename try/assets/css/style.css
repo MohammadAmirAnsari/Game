@@ -132,12 +132,13 @@ h1 {
   font-size: 5rem;
   font-family: 'Tangerine'; }
 
-.shift {
+.dice {
   border-color: white; }
-  .shift.transition {
-    transition: transform ease-in 0.2s; }
+
+.transition {
+  transition: transform ease-in 0.2s; }
 
 .animation {
-  animation: zoom-in-out 1s infinite; }
+  animation: zoom-in-out 2s infinite; }
 
 /*# sourceMappingURL=style.css.map */

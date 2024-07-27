@@ -47,22 +47,26 @@ function makeMatrix(rows, columns) {
 }
 
 let currentPosition = { row: rows - 1, column: columns - 1 }
+let rowLevel = columnLevel = 0
+
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') event.preventDefault();
 
     matrix = makeMatrix(rows, columns)
+    let dice = matrix[currentPosition.row][currentPosition.column]
+    // dice.classList.toggle('animation')
+    // dice.classList.add('transition')
 
-    dice = matrix[rows - 1][columns - 1]
-    dice.classList.remove('animation')
-    dice.classList.toggle('transition')
 
-
+    // console.log("before currentPosition.row:" + currentPosition.row, "currentPosition.column:" + currentPosition.column)
     if (event.key === 'ArrowUp') {
         gem = matrix[currentPosition.row - 1][currentPosition.column]
         moveUp(dice, gem, currentPosition)
+        // console.log("after currentPosition.row:" + currentPosition.row, "currentPosition.column:" + currentPosition.column)
         // } else if (event.key === 'ArrowDown') {
-        //     lowerDiv = matrix[rows][columns - 1]
-        //     moveDown(dice, lowerDiv)
+        //     gem = matrix[currentPosition.row + 1 ][currentPosition.column]
+        //     moveDown(dice, gem, currentPosition)
         // } else if (event.key === 'ArrowLeft') {
         //     leftDiv = matrix[rows - 1][columns - 2]
         //     moveLeft(dice, leftDiv)
@@ -70,48 +74,120 @@ document.addEventListener('keydown', (event) => {
         //     rightDiv = matrix[rows - 1][columns]
         //     moveRight(dice, rightDiv)
     }
-    dice.classList.add('animation')
+    // dice.classList.toggle('animation')
     // dice.classList.toggle('transition')
 
 
 })
 
-
 function moveUp(dice, gem, currentPosition) {
-    console.log(gem)
 
-    diceRect = dice.getBoundingClientRect()
-    diceTransformOrigin = window.getComputedStyle(dice).transformOrigin
-    console.log("before diceTransformOrigin:" + diceTransformOrigin)
-
-    gemRect = gem.getBoundingClientRect()
-    gemTransformOrigin = window.getComputedStyle(gem).transformOrigin
+    // parent = document.querySelector('.grid')
+    // addTransition(gem)
 
 
+    // diceRect = dice.getBoundingClientRect()
+    // diceTransformOrigin = window.getComputedStyle(dice).transformOrigin
+    // // console.log("before diceTransformOrigin:" + diceTransformOrigin)
 
-    deltaX = Math.ceil((columns - currentPosition.column) * (gemRect.x - diceRect.x))
-    deltaY = Math.ceil((rows - currentPosition.row) * (gemRect.y - diceRect.y))
+    // gemRect = gem.getBoundingClientRect()
+    // gemTransformOrigin = window.getComputedStyle(gem).transformOrigin
 
+    // gridRowGap = parseInt(window.getComputedStyle(parent).rowGap, 10)
+    // griColumnGap = parseInt(window.getComputedStyle(parent).columnGap, 10)
 
-    console.log("pos of dice:" + deltaX, deltaY)
-    // console.log(deltaX, deltaY, gemX, gemY)
+    // deltaX = Math.ceil(columnLevel * (gemRect.x - diceRect.x))
+    // deltaY = Math.ceil(++rowLevel * (gemRect.y - diceRect.y))
+    // gemX = Math.ceil(gemRect.x - diceRect.x)
+    // gemY = -Math.ceil(gemRect.y - diceRect.y)
 
-    diceTransformOriginX = Math.ceil(parseInt(diceTransformOrigin.split(' ')[0]) + dice.offsetWidth / 2 * (rows - (currentPosition.row + 1)))
-    diceTransformOriginY = Math.ceil(parseInt(diceTransformOrigin.split(' ')[1]) + dice.offsetHeight / 2 * (columns - (currentPosition.column)))
-    console.log("origin:" + diceTransformOriginX, diceTransformOriginY)
-    console.log("gto:" + gemTransformOrigin)
-    gemTransfromOriginX = Math.ceil(parseInt(gemTransformOrigin.split(' ')[0]) + gem.offsetWidth / 2 * (rows - (currentPosition.row + 1)))
-    gemTransfromOriginY = Math.ceil(parseInt(gemTransformOrigin.split(' ')[1]) + gem.offsetHeight / 2 * (rows - (currentPosition.column - 2)))
+    // // console.log("currentPosition.row:" + currentPosition.row, "currentPosition.column:" + currentPosition.column)
+    // // console.log("gemx: " + gemRect.x, "gemy: " + gemRect.y)
+    // // console.log("gemX: " + gemX, "gemY: " + gemY)
+    // // console.log("dicex: " + diceRect.x, "dicey: " + diceRect.y)
+    // // console.log("deltaX: " + deltaX, "deltaY: " + deltaY)
 
-    dice.style.transform = `translate(${deltaX}px, ${deltaY}px)`
-    dice.style.transformOrigin = `${diceTransformOriginX}px ${-diceTransformOriginY}px`
-    console.log("after diceTransformOrigin:" + `${diceTransformOriginX}px ${diceTransformOriginY}px`)
+    // diceTransformOriginX = parseInt(diceTransformOrigin.split(' ')[0], 10)
 
-    gem.style.transform = `translate(${-deltaX}px, ${-deltaY}px)`
-    gem.style.transformOrigin = `${gemTransfromOriginX}px ${gemTransfromOriginY}px`
+    // diceTransformOriginY = (parseInt(diceTransformOrigin.split(' ')[1], 10) - diceRect.height / 2) - (gemRect.height / 2 + gridRowGap)
 
-    console.log(currentPosition)
+    // // console.log("diceTransformOrigin: " + diceTransformOrigin.split(' ')[1])
+    // // console.log("diceTransformOriginX: " + diceTransformOriginX, "diceTransformOriginY: " + diceTransformOriginY)
+    // dice.style.transform = `translate(${deltaX}px, ${deltaY}px)`
+    // dice.style.transformOrigin = `${diceTransformOriginX}px ${diceTransformOriginY}px`
+
+    // gem.style.transform = `translate(${gemX}px, ${gemY}px)`
+    // // gem.style.transformOrigin = `${gemTransfromOriginX}px ${gemTransfromOriginY}px`
+
     currentPosition.row = currentPosition.row - 1
-    console.log(currentPosition)
+    swap(dice, gem)
+    removeTransition(dice, gem)
 }
 
+function moveDown(dice, gem, currentPosition) {
+
+    parent = document.querySelector('.grid')
+    addTransition(gem)
+
+    diceRect = dice.getBoundingClientRect()
+    gemRect = gem.getBoundingClientRect()
+
+    diceTransformOrigin = window.getComputedStyle(dice).transformOrigin
+    gemTransformOrigin = window.getComputedStyle(gem).transformOrigin
+
+    gridRowGap = parseInt(window.getComputedStyle(parent).rowGap, 10)
+    griColumnGap = parseInt(window.getComputedStyle(parent).columnGap, 10)
+
+    deltaX = Math.ceil(columnLevel * (gemRect.x - diceRect.x))
+    deltaY = Math.ceil(--rowLevel * (gemRect.y - diceRect.y))
+    gemX = Math.ceil(gemRect.x - diceRect.x)
+    gemY = Math.ceil(gemRect.y - diceRect.y)
+
+    // console.log("currentPosition.row:" + currentPosition.row, "currentPosition.column:" + currentPosition.column)
+    // console.log("gemx: " + gemRect.x, "gemy: " + gemRect.y)
+    // console.log("gemX: " + gemX, "gemY: " + gemY)
+    // console.log("dicex: " + diceRect.x, "dicey: " + diceRect.y)
+    // console.log("deltaX: " + deltaX, "deltaY: " + deltaY)
+
+    diceTransformOriginX = parseInt(diceTransformOrigin.split(' ')[0], 10)
+    diceTransformOriginY = (parseInt(diceTransformOrigin.split(' ')[1], 10) - diceRect.height / 2) - (gemRect.height / 2 + gridRowGap)
+
+    console.log("diceTransformOrigin: " + diceTransformOrigin.split(' ')[1])
+    console.log("diceTransformOriginX: " + diceTransformOriginX, "diceTransformOriginY: " + diceTransformOriginY)
+
+    dice.style.transform = `translate(${deltaX}px, ${deltaY}px)`
+    dice.style.transformOrigin = `${diceTransformOriginX}px ${diceTransformOriginY}px`
+
+    gem.style.transform = `translate(${gemX}px, ${gemY}px)`
+    // gem.style.transformOrigin = `${gemTransfromOriginX}px ${gemTransfromOriginY}px`
+
+    currentPosition.row = currentPosition.row + 1
+
+    removeTransition(gem)
+}
+
+
+function addMotion(dice, gem) {
+    dice.classList.add('animation')
+    gem.classList.add('transition')
+}
+
+function removeMotion(dice, gem) {
+    dice.addEventListener('transitionend', () => {
+        dice.classList.remove('animation')
+    })
+    gem.addEventListener('transitionend', () => {
+        gem.classList.remove('transition')
+        // swap(dice, gem)
+    })
+
+}
+
+function swap(dice, gem) {
+    temp = dice.classList.value
+    dice.classList = gem.classList.value
+    gem.classList.value = temp
+    temp = dice.innerText
+    dice.innerText = gem.innerText
+    gem.innerText = temp
+}
