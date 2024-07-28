@@ -1,0 +1,23 @@
+grid
+    gap = grid-gap
+        row-gap = grid-row-gap
+        column-gap = grid-column-gap
+    grid-area
+        grid-row-start
+        grid-column-start
+        grid-row-end
+        grid-column-end
+    grid-column
+        grid-column-start
+        grid-row-end
+    grid-row
+        grid-row-start
+        grid-row-end
+    grid-auto-columns
+    grid-auto-rows
+    grid-auto-flow
+    grid-template
+        grid-template-rows
+        grid-template-columns
+        grid-area
+    grid-template-areas

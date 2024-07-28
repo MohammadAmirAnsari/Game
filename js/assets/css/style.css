@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Tangerine|Roboto&effect=fire");
+form {
+  display: grid;
+  gap: 0.875rem 0.875rem;
+  grid-template-areas: 'label-row label-col' 'input-row input-col' 'button button';
+  grid-template-columns: repeat(9, 1fr); }
+  form * {
+    border: 2px solid black; }
+  form label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    min-height: 30px;
+    padding: 5px 20px;
+    border: 2px solid #ffe699;
+    border-radius: 15px 10px; }
+  form label[for=rows] {
+    grid-area: label-row;
+    grid-column: 3/span 1; }
+  form label[for=columns] {
+    grid-area: label-col;
+    grid-column: 7/span 1; }
+  form input[name=rows] {
+    grid-area: input-row;
+    grid-column: 2/span 3; }
+  form input[name=columns] {
+    grid-area: input-row;
+    grid-column: 6/span 3; }
+  form input {
+    min-height: 2rem;
+    padding-left: 10px;
+    color: #ffe699;
+    border-radius: 10px 15px;
+    border-color: #ffe699;
+    background-color: black; }
+    form input::placeholder {
+      color: gray; }
+    form input:focus {
+      border-color: #ffe699;
+      outline: none; }
+      form input:focus:focus::placeholder {
+        color: gray; }
+  form button {
+    grid-area: button;
+    grid-column: 5/span 1;
+    color: #ffe699;
+    border-radius: 50px;
+    border-color: #ffe699;
+    background-color: black;
+    height: 2rem;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem; }
+    form button:hover {
+      color: black;
+      border: 2px solid black;
+      background-color: #ffe699; }
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; }
+  html *::-webkit-scrollbar {
+    display: none; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+#div-root {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: 2px solid white;
+  background-color: black;
+  text-align: center;
+  color: #ffe699; }
+
+@keyframes zoom-in-out {
+  0% {
+    scale: 0.9; }
+  50% {
+    scale: 1.1; }
+  100% {
+    scale: 0.9; } }
+@keyframes zoom-in-out2 {
+  0% {
+    transform: scale(0.9, 0.9); }
+  50% {
+    transform: scale(1.1, 1.1); }
+  100% {
+    transform: scale(0.9, 0.9); } }
+@keyframes rotate {
+  from {
+    rotate: 0deg; }
+  to {
+    rotate: 360deg; } }
+.grid {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border: 2px solid #b09030;
+  border-radius: 0.625rem;
+  overflow: auto;
+  margin-bottom: 2rem; }
+
+.grid-items {
+  border: 2px solid #4d4d4d;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px #b09030, 0 0 20px #ffe699, 0 0 20px #e6e6e6;
+  transition: scale 0.2s; }
+  .grid-items:not(:last-child):hover {
+    scale: 1.1; }
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Roboto'; }
+
+h1 {
+  font-size: 5rem;
+  font-family: 'Tangerine'; }
+
+.dice {
+  border-color: white; }
+
+.transition {
+  transition: transform ease-in 0.2s; }
+
+.animation {
+  animation: zoom-in-out 2s infinite; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+// $root-width: 80%;
+$root-width: 960px;
+
+
+$font-10-2xs: 0.625rem; // 2xs 10px;
+$font-12-xs	: 0.75rem; // xs 12px;
+$font-14-sm	: 0.875rem; // sm 14px;
+$font-16-md	: 1rem; // md 16px;
+$font-18-lg	: 1.125rem; // lg 18px;
+$font-20-xl	: 1.25rem; // xl 20px;
+$font-24-2xl: 1.5rem; // 2xl 24px;
+$font-28-3xl: 1.75rem; // 3xl 28px;
+$font-32-4xl: 2rem; // 4xl 32px;
+$font-36-5xl: 2.25rem; // 5xl 36px;
+$font-40-6xl: 2.5rem; // 6xl 40px;
+$font-48-7xl: 3rem; // 7xl 48px;
+$font-56-8xl: 3.5rem; // 8xl 56px;
+$font-64-9xl: 4rem; // 9xl 64px;
+$font-72-10xl: 4.5rem; // 10xl 72px;
+$font-80-11xl: 5rem; // 11xl 80px;
+$font-96-12xl: 6rem; // 12xl 96px;
+
+
+$light-1 : hsl(0, 0%, 100%);
+$light-2 : hsl(0, 0%, 90%);
+$light-3 : hsl(0, 0%, 80%);
+$light-4 : hsl(0, 0%, 70%);
+$light-5 : hsl(0, 0%, 60%);
+$grey : hsl(0, 0%, 50%);
+$dark-1 : hsl(0, 0%, 40%);
+$dark-2 : hsl(0, 0%, 30%);
+$dark-3 : hsl(0, 0%, 20%);
+$dark-4 : hsl(0, 0%, 10%);
+$dark-5 : hsl(0, 0%, 0%);
+
+$gold : hsl(45, 100%, 50%);
+$light-gold : hsl(45, 100%, 80%);
+$dark-gold : hsl(45, 57%, 44%);
+
+$button-text-color: $light-gold;
+$button-bg-color: $dark-5;

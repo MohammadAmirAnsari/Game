@@ -1,0 +1,51 @@
+.grid {
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    border: 2px solid $dark-gold;
+    border-radius: $font-10-2xs;
+    overflow: auto;
+    margin-bottom: 2rem;
+}
+
+.grid-items {
+    border: 2px solid $dark-2;
+    font-size: $font-24-2xl;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px $dark-gold, 0 0 20px $light-gold, 0 0 20px $light-2;
+    transition: scale 0.2s;
+
+    &:not(:last-child):hover {
+        scale: 1.1;
+    }
+
+}
+
+h2 {
+    font-size: $font-48-7xl;
+    font-family: 'Roboto';
+}
+
+h1 {
+    font-size: $font-80-11xl;
+    font-family: 'Tangerine';
+}
+
+.dice {
+    border-color: $light-1;
+
+}
+
+.transition {
+    transition: transform ease-in 0.2s;
+}
+
+.animation {
+    animation: zoom-in-out 2s infinite;
+}
